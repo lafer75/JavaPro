@@ -1,18 +1,25 @@
 package threeHomework;
 
-public class Dog implements Animals{
-    @Override
-    public void run() {
+public class Dog extends Animals {
+    private final int maxDistance = 300;
 
-    }
-    protected int run(int a) {
-        return a;
-    }
-    @Override
-    public void swim() {
+    private final int isSwimm = 10;
+    private static int dogCount;
 
+
+    public Dog() {
+        super.maxDistance = this.maxDistance;
+        super.isSwim = this.isSwimm;
+        incrementDog();
+        
     }
-    protected int swim(int b) {
-        return b;
+    public static void incrementDog(){
+        dogCount++;
     }
+    public static int getDogCount(){
+        return dogCount;
+    }
+
+
+
 }

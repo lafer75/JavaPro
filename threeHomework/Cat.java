@@ -1,19 +1,24 @@
 package threeHomework;
 
-public class Cat implements Animals{
-    @Override
-    public void run() {
+public class Cat extends Animals {
+    private final int maxDistance = 200;
+    private static int catCount;
 
-    }
-    protected int run(int a) {
-        return a;
-    }
-
-    @Override
-    public void swim() {
-        System.out.println("Коти не всміють плавати");
+    public Cat() {
+        super.maxDistance = this.maxDistance;
+        incrementCat();
     }
 
+    public Cat(boolean isSwim) {
+        super.maxDistance = this.maxDistance;
+    }
+    public static void incrementCat(){
+        catCount++;
+    }
+
+    public static int getCatCount() {
+        return catCount;
+    }
 
 
 }
