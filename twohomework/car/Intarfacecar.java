@@ -1,4 +1,4 @@
-package twohomework.Car;
+package twohomework.car;
 
 public interface Intarfacecar {
 

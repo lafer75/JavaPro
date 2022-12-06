@@ -1,4 +1,4 @@
-package twohomework.Same;
+package twohomework.same;
 
 public class SameName {
 }
