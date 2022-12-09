@@ -1,30 +1,27 @@
 package fourhomework.Figure;
 
-public class Triangle implements figure {
+public class Triangle implements Figure {
 
     int thetop;
-    int side;
 
-    public Triangle(int side, int thetop) {
+
+    public Triangle( int thetop) {
         this.thetop = thetop;
-        this.side = side;
+
     }
 
 
 
+
+
     @Override
-    public void countAreaTriangle(int triangll, int triangles) {
-        int a = triangll;
-        int b = triangles;
-        double c = (a*b)/2;
-        if (b <= thetop && a >= side) {
+    public void countArea(int area) {
+        int a = area;
+        double c = a*3;
+        if (a <= thetop && a>0) {
             System.out.println("Площа трикутника: " + c + " cm");
         }else{
             System.out.println("Щось пішло нет, змініть числа або спробуйте пізніше");
         }
-
-    }
-    @Override
-    public void countArea(int area) {
     }
 }

@@ -1,6 +1,6 @@
 package fourhomework.Figure;
 
-public class Circle implements figure {
+public class Circle implements Figure {
 
     int radius;
 
@@ -15,7 +15,7 @@ public class Circle implements figure {
         double c = Math.PI*(b*b);
         double scale = Math.pow(10, 1);
         double result = Math.ceil(c * scale) / scale;
-        if( area <= radius){
+        if( area <= radius && a>0){
             System.out.println("Площа кола: " + result + " cm");
         }else {
             System.out.println("Щось пішло нет, змініть числа або спробуйте пізніше");
@@ -23,9 +23,5 @@ public class Circle implements figure {
 
     }
 
-    @Override
-    public void countAreaTriangle(int triangll, int triangles) {
-
-    }
 
 }

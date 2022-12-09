@@ -1,6 +1,6 @@
 package fourhomework.Figure;
 
-public class Square implements figure{
+public class Square implements Figure {
 
     int way;
 
@@ -12,16 +12,11 @@ public class Square implements figure{
     public void countArea(int area) {
         int a = area;
         int b = a*4;
-        if( area <= way){
+        if( area <= way && a>0){
             System.out.println("Площа квадрата: " + b + " cm");
         }else {
             System.out.println("Щось пішло нет, змініть числа або спробуйте пізніше");
         }
-
-    }
-
-    @Override
-    public void countAreaTriangle(int triangll, int triangles) {
 
     }
 }

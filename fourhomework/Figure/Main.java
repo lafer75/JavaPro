@@ -1,16 +1,15 @@
 package fourhomework.Figure;
 
-public class main {
+public class Main {
     protected int a;
     public static void main(String[] args) {
-        figure[] figr = new figure[]{
+        Figure[] figr = new Figure[]{
                 new Circle(20),
-                new Triangle(10, 15),
+                new Triangle(15),
                 new Square(30)
         };
-        for (figure figure: figr) {
+        for (Figure figure: figr) {
             figure.countArea(13);
-            figure.countAreaTriangle(11,15);
         }
 
 
