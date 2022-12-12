@@ -1,5 +1,7 @@
 package fivehomework;
 
+import java.util.Scanner;
+
 public class HomeWorkApp {
     static void printThreeWords() {
         System.out.println("Orange\nBanana\nApple");
@@ -39,28 +41,51 @@ public class HomeWorkApp {
     }
 
 
-
     static void sixQuestion(int a, int b) {
         if ((a + b) >= 10 && (a + b) <= 20) {
             System.out.println(true);
-        }else{
+        } else {
             System.out.println(false);
         }
 
 
     }
+
     static void sevenQuestion(int a) {
-        if(a>=0){
+        if (a >= 0) {
             System.out.println("Додатнє число");
-        }else{
+        } else {
             System.out.println("Відємне число");
         }
     }
+
     static void eightQuestion(int a) {
-        if(a>=0){
+        if (a >= 0) {
             System.out.println(false);
-        }else{
+        } else {
             System.out.println(true);
+        }
+    }
+
+    static void nineQuestion(String a, int b) {
+        for (int c = 0; c < b; c++) {
+            System.out.println(a);
+        }
+    }
+
+    static void tenQuestion(int a) {
+        Scanner b = new Scanner(System.in);
+        if (a % 4 == 0) {
+            if (a % 100 != 0 || (a % 100 == 0 && a % 400 == 0))
+            {
+                System.out.println("Рік високосний");
+            }
+            else{
+                System.out.println("Рік не високосний");
+            }
+        }
+        else{
+            System.out.println("Рік не високосний");
         }
     }
 
@@ -73,11 +98,15 @@ public class HomeWorkApp {
         System.out.println("----------------------------------");
         HomeWorkApp.compareNumbers();
         System.out.println("----------------------------------");
-        HomeWorkApp.sixQuestion(12,2);
+        HomeWorkApp.sixQuestion(12, 2);
         System.out.println("----------------------------------");
         HomeWorkApp.sevenQuestion(-3);
         System.out.println("----------------------------------");
         HomeWorkApp.eightQuestion(3);
+        System.out.println("----------------------------------");
+        HomeWorkApp.nineQuestion("bam", 4);
+        System.out.println("----------------------------------");
+        HomeWorkApp.tenQuestion(2308);
         System.out.println("----------------------------------");
     }
 }
