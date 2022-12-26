@@ -3,6 +3,8 @@ package sixhomework;
 import java.util.Random;
 import java.util.Scanner;
 
+
+
 public class Main {
     private static void findSymbolOccurance(String habr, char searchChar) {
         int length = habr.length();
@@ -61,6 +63,7 @@ public class Main {
         int word = random.nextInt(words.length);
         String wor = words[word];
         String scane = scan.nextLine();
+
         System.out.println("wor  " + wor);
 
         int o = 0;
