@@ -3,8 +3,6 @@ package sixhomework;
 import java.util.Random;
 import java.util.Scanner;
 
-import static jdk.internal.joptsimple.internal.Messages.message;
-
 public class Main {
     private static void findSymbolOccurance(String habr, char searchChar) {
         int length = habr.length();
@@ -63,124 +61,55 @@ public class Main {
         int word = random.nextInt(words.length);
         String wor = words[word];
         String scane = scan.nextLine();
-        int worLength = wor.length();
-        int scaneLenght = scane.length();
         System.out.println("wor  " + wor);
 
-        System.out.println("worLength = " + worLength);
-        if (wor.equals(scane)) {
-            System.out.println("Супер!!! Ви вгадали слово  " + wor);
-        }
-        int a = 0;
-        int b = 1;
+        int o = 0;
         int c = 2;
-        int d = 3;
-        int i = 4;
-        int f = 5;
-        int s = 0;
-        if (s < wor.length()){
-            System.out.print(wor.charAt(s));
-            s++;
-            if (s < wor.length()){
-                System.out.print(wor.charAt(s) + "#############\n");
-                s++;
-                String o = scan.nextLine();
-            }else{
-                System.out.print(wor.charAt(s) + "#############\n");
-                s++;
-                String o = scan.nextLine();
-            } if (s < wor.length()) {
-                System.out.print(wor.charAt(s-2) +""+wor.charAt(s-1) +wor.charAt(s));
-                s++;
-                if (s < wor.length()) {
-                    System.out.print(""+wor.charAt(s) +"#############\n");
-                    s++;
+        int q = 3;
+        int w = 5;
+        int e = 7;
+        int r = 9;
+        StringBuilder str = new StringBuilder("###############");
 
-                    String o = scan.nextLine();
-                } else {
-                    System.out.print(wor.charAt(s-3) +""+wor.charAt(s-2) +""+wor.charAt(s-1) +wor.charAt(s) + "#############\n");
-                    s++;
-                    String o = scan.nextLine();
-                }
+        if (wor.equals(scane)) {
+            System.out.println("sdgbsfgbsfgbsfvxbrwesgwerhjsfd");
+        }
+        for (int i = 2; ; ) {
+            String a = String.valueOf(str.replace(0, i, ""));
+            if (c == wor.length()) {
+                i = 0;
             }
-            if (s < wor.length()) {
-                System.out.print(wor.charAt(s));
-                s++;
-                if (s < wor.length()) {
-                    System.out.print(wor.charAt(s) + "#############\n");
-                    s++;
-                    String o = scan.nextLine();
-                } else {
-                    System.out.print(wor.charAt(s) + "#############\n");
-                    s++;
-                    String o = scan.nextLine();
+            String b = wor.substring(o, c);
+            System.out.println(b + a);
+            if (c < wor.length()) {
+                c++;
+                if (c < wor.length()) {
+                    c++;
                 }
+                if (c == wor.length() && wor.length() == q) {
+                    i = 1;
+                }
+                if (c == wor.length() && wor.length() == w) {
+                    i = 1;
+                }
+                if (c == wor.length() && wor.length() == e) {
+                    i = 1;
+                }
+                if (c == wor.length() && wor.length() == r) {
+                    i = 1;
+                }
+
+
+            }
+            String g = scan.nextLine();
+            if (wor.equals(g)) {
+                System.out.println("Супер ти вгадав слово: " + wor +"!!!");
+                break;
             }
 
         }
- //       if (a < wor.length()) {
-   //         if (scane == wor) {
-        //         System.out.println("Супер!!! Ви вгадали слово  " + wor);
-        //    }
-        //    System.out.print(wor.charAt(a));
-        //}
-        //if (b < wor.length()) {
-          //  System.out.print(wor.charAt(b) + "#############\n");
-            //String g = scan.nextLine();
-//
-  //      }
-    //    if (c < wor.length()) {
-      //      System.out.print(wor.charAt(c));
-        //}
-       // if (d < wor.length()) {
-         //       System.out.print(wor.charAt(d) + "#############\n");
-           //     String g = scan.nextLine();
-            //}else {
-              //  System.out.print(wor.charAt(c) + "#############\n");
-               // String g = scan.nextLine();
-        //}
-        //if (i < wor.length()) {
-          //  System.out.print(wor.charAt(i));
-        //}else{
 
-        //}
-        //if (f < wor.length()) {
-          //      System.out.print(wor.charAt(f) + "#############\n");
-            //    String g = scan.nextLine();
-            //}else {
-              //  System.out.print(wor.charAt(f) + "#############\n");
-                //String g = scan.nextLine();
-            //}
-
-
-
-
-
-//        for (int i = 3; i < worLength;){
-//            System.out.print(wor.charAt(i));
-        //          i++;
-        //  System.out.print(wor.charAt(i) + "#############\n");
-        //  i++;
-        //  String a = scan.nextLine();
-        //}
-        //for (int i = 5; i < worLength;){
-        //  System.out.print(wor.charAt(i));
-        //  i++;
-        //  System.out.print(wor.charAt(i) + "#############\n");
-        //  i++;
-        //  String a = scan.nextLine();
-        //for (int i = 7; i < worLength;){
-        //  System.out.print(wor.charAt(i));
-        //  i++;
-        //  System.out.print(wor.charAt(i) + "#############\n");
-        //  i++;
-        //  String a = scan.nextLine();
-        //}
-
-
-        System.out.println(" = " + wor.charAt(2));
 
     }
 
 }
-//    (scane.charAt(0)==wor.charAt(0))
