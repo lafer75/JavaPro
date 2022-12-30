@@ -1,16 +1,13 @@
 package eighthomework;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Formatter;
 
 public class FileLoggerConfiguration {
     private static LoggingLevel level;
     private String filePath;
     private Formatter formatter;
-    private static int size = 1;
+    private static int size = 111;
 
 
     public FileLoggerConfiguration(LoggingLevel level, String filePat) {
@@ -27,17 +24,32 @@ public class FileLoggerConfiguration {
         return filePath;
     }
 
-    public static void writeFile(String a) throws IOException {
+    public static String writeFile(String a) throws IOException {
         File file = new File("logger");
         PrintWriter printWriter = new PrintWriter("logger");
-        printWriter.println(a);
-        System.out.println(file.length());
-        if (size > file.length()) {
-            System.out.println("asdasddasdasd = ");
 
+        if (size > file.length()) {
+            printWriter.println(a);
+        } else {
+            System.out.println("Не достаточно памяти");
         }
         printWriter.close();
-
+        return a;
     }
+
+    public static String writeFille(String a) throws IOException {
+        File file = new File("logger");
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("logger"));
+        if (size > file.length()) {
+            bufferedWriter.write(a);
+        } else {
+            System.out.println("Не достаточно памяти");
+        }
+
+        bufferedWriter.close();
+
+        return a;
+    }
+
 
 }
