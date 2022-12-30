@@ -12,6 +12,7 @@ public class FileLogger {
     public static void setUpLogger(FileLoggerConfiguration config) {
         FileLoggerConfiguration FileLoggerConfiguration = config;
     }
+
     static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MMMM/yyyy", new Locale("uk", "UA"));
     static String date = dateFormat.format(new Date());
 
@@ -19,15 +20,18 @@ public class FileLogger {
     static DateFormat dateFormate = DateFormat.getTimeInstance(DateFormat.DEFAULT, (Locale) locale);
     static String time = dateFormate.format(new Date());
 
-    public static String debug(String text) throws IOException {
-        String a = FileLoggerConfiguration.writeFile(date + " || " + time
-                + " | " + eighthomework.FileLoggerConfiguration.getLevel() + " | " + text);
+    static String DEBUG = "lOG TEXT";
+    static String INFO = "DFJDDFJDFGJ";
+
+    public static String debug(String text) throws Exception {
+        String a = FileLoggerConfiguration.writeFile("|||||||DEBUG|||||||\n|||data|||      |||time||| |level| |||message|||\n" + date + " || " + time
+                + " | " + eighthomework.FileLoggerConfiguration.getLevel() + " | " + DEBUG + "\n" + info(INFO));
         return a;
     }
 
-    public static String info(String text) throws IOException {
-        String a = FileLoggerConfiguration.writeFile(date + " || " + time
-                + " | " + eighthomework.FileLoggerConfiguration.getLevel() + " | " + text);
+    public static String info(String text) throws Exception {
+        String a = FileLoggerConfiguration.writeFile("|||||||INFO|||||||\n|||data|||      |||time||| |level| |||message|||\n" + date + " || " + time
+                + " | " + eighthomework.FileLoggerConfiguration.getLevel() + " | " + INFO);
         return a;
     }
 }
