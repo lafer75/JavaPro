@@ -5,7 +5,7 @@ import java.io.*;
 public class FileLoggerConfiguration {
     private static LoggingLevel level;
     private static String filePath;
-    private static int size = 0;
+    private static int size = 1;
 
 
     public FileLoggerConfiguration(LoggingLevel level, String filePat) {
