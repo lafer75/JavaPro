@@ -27,8 +27,13 @@ public class Main {
         System.out.println("list "+listt);
         return new Object[]{listt, str};
     }
-    public static void findUnique(){
-
+    public static void findUnique(int[] array){
+        List<Integer> myList = new ArrayList<>();
+        for (int x : array) {
+            if (!myList.contains(x))
+                myList.add(x);
+        }
+        System.out.println(myList);
     }
 
     public static void main(String[] args) {
@@ -36,8 +41,11 @@ public class Main {
                 "Ball", "Cake", "Sunshine", "Come on", "Shake", "Pharmaceutic", "Rarely", "True"));
         String[] str = new String[0];
         List<String> listt = null;
+        int[] array;
         countOccurance(list, 0);
         System.out.println("------------------------------------------------------");
         toList(listt, str);
+        System.out.println("------------------------------------------------------");
+        findUnique(new int[]{3,7,13,984,13,78,7,7,7,3,13,67,54});
     }
 }
