@@ -26,6 +26,6 @@ public class ValueCalculator {
         System.out.println(c.length);
         System.out.println(d.length);
         Thread thread = new Thread(new Flow());
-        thread.runn();
+        thread.run();
     }
 }
