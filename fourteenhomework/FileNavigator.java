@@ -5,8 +5,6 @@ import java.util.*;
 
 public class FileNavigator {
 
-    private List<FileData> list;
-
     private Map<String, List<FileData>> Mapp;
 
     public FileNavigator() {
@@ -26,8 +24,8 @@ public class FileNavigator {
 
     public List<String> find(String path) {
         List<String> fileList = new ArrayList<>();
-        if (this.Mapp.containsKey(path)) {
-            List<FileData> files = this.Mapp.get(path);
+        if (Mapp.containsKey(path)) {
+            List<FileData> files = Mapp.get(path);
             for (FileData file : files) {
                 fileList.add(file.getFileName());
             }
@@ -37,7 +35,7 @@ public class FileNavigator {
 
     public List<String> filterBySize(long size) {
         List<String> fileList = new ArrayList<>();
-        for (Map.Entry<String, List<FileData>> entry : this.Mapp.entrySet()) {
+        for (Map.Entry<String, List<FileData>> entry : Mapp.entrySet()) {
             List<FileData> files = entry.getValue();
             for (FileData file : files) {
                 if (file.getFileSize() <= size) {
@@ -50,7 +48,7 @@ public class FileNavigator {
 
 
     public String remove(String path) {
-        Iterator<Map.Entry<String, List<FileData>>> iterator = this.Mapp.entrySet().iterator();
+        Iterator<Map.Entry<String, List<FileData>>> iterator = Mapp.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, List<FileData>> entry = iterator.next();
             if (Objects.equals(entry.getKey(), path)) {

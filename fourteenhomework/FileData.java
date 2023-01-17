@@ -29,4 +29,3 @@ public class FileData implements Comparable<FileData>{
         return this.getFileSize() - fd.getFileSize();
     }
 }
-

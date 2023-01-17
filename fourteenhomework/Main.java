@@ -20,15 +20,17 @@ public class Main {
 
 
         System.out.println("find()");
-        System.out.println(navi.find("fourteenhomework1/"));
-        System.out.println(navi.find("fourteenhomework2/"));
-        System.out.println(navi.find("fourteenhomework3/"));
-        System.out.println(navi.find("fourteenhomework4/"));
-        System.out.println(navi.find("fourteenhomework5/"));
+        int a = 1;
+        for(int i = 1; i <5; i++){
+            String b = "fourteenhomework"+i+"/";
+            System.out.print("Шукаємо"+b);
+            System.out.println(navi.find(b));
+        }
         System.out.println();
 
         System.out.println("filterBySize()");
-        System.out.println(navi.filterBySize(15));
+        int i = 15;
+        System.out.println("Файли меньше "+i+" байтів: "+navi.filterBySize(i));
         System.out.println();
 
         System.out.println("remove()");
