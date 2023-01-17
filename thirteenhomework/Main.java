@@ -16,7 +16,6 @@ public class Main {
                 count++;
             }
         }
-        for()
         System.out.println("count = " + count);
         return list;
     }
