@@ -11,7 +11,7 @@ public class ThreadSafeList {
             list.add(text);
         }
     }
-    public void get (int i){
+    public String get (int i){
         synchronized (list){
             if(i<=list.size()){
                 System.out.println(list.get(i));
@@ -19,6 +19,7 @@ public class ThreadSafeList {
                 System.out.println("Немає значення по такому індексу");
             }
         }
+        return list.get(i);
     }
     public int remove(int a){
         synchronized (list){
